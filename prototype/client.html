@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>设备生产进度查询 · 客户端</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ctext y='13' font-size='13'%3E⚙️%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/common.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html"><span class="brand-mark">⚙</span>设备生产进度查询</a>
+    <span class="topbar-note">客户端 · 只读查询</span>
+    <span class="topbar-spacer"></span>
+    <a href="admin.html">管理端入口 →</a>
+  </header>
+
+  <main class="container">
+    <h1 class="page-title">我的设备做得怎么样了？</h1>
+    <p class="page-sub">输入设备编号 / 合同号 / 机型关键词，即可查看该设备的生产进度。演示环境可直接点击下方示例编号。</p>
+
+    <section class="card">
+      <form class="search-row" id="search-form">
+        <input type="text" id="search-input" placeholder="例如：SX-BC-2026-012 或 HT-2026-031 或 管材"
+               autocomplete="off" aria-label="查询关键词">
+        <button class="btn" type="submit">查询</button>
+      </form>
+      <div class="sample-chips" id="sample-chips"></div>
+    </section>
+
+    <section id="result-area" aria-live="polite"></section>
+  </main>
+
+  <script src="js/constants.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/client.js"></script>
+</body>
+</html>
